@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&family=Jost:ital,wght@0,400;0,500;0,800;1,500&family=Montserrat:wght@300;400;600&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #07305d;
+  --background-form-color: #0f1d45;
+  --primary-font-raleway: "Raleway", sans-serif;
+  --secondary-font-montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font-raleway);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary-color);
+  background: url(/public/imges/biuer.png) no-repeat,
+    url(/public/imges/background-color.png) no-repeat,
+    url(/public/imges/background-city.png) no-repeat;
+
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.main_wrapper {
+  margin: 0 auto;
+  max-width: 1500px;
+  background: url(/public/imges/mentor.png) no-repeat right bottom;
+
+  @media (max-width: 1100px) {
+    background-size: 400px 600px;
+  }
+
+  @media (max-width: 800px) {
+    background-size: 320px 500px;
+  }
+
+  @media (max-width: 450px) {
+    background-size: 250px 400px;
+    background-position: right -85px bottom 0;
+  }
+}
+
+.info_section {
+  margin-top: 112px;
+  padding-bottom: 43px;
+
+  @media (max-width: 1100px) {
+    margin-top: 92px;
+  }
+}

@@ -1,0 +1,44 @@
+.info_card {
+  max-width: 202px;
+  height: 132px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: #ffffff9c solid 1px;
+
+  &_title {
+    font-family: var(--secondary-font-montserrat);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56.52px;
+  }
+
+  &_desc {
+    font-size: 16px;
+    line-height: 19.65px;
+    opacity: 0.5;
+  }
+
+  &_desc_mobile {
+    display: none;
+  }
+  @media (max-width: 1100px) {
+    height: 35px;
+
+    &_title {
+      font-size: 16px;
+      line-height: 22.61px;
+    }
+
+    &_desc_desktop {
+      display: none;
+    }
+
+    &_desc_mobile {
+      display: block;
+      font-size: 10px;
+      line-height: 12.28px;
+    }
+  }
+}

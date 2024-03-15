@@ -1,0 +1,27 @@
+.info {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1320px;
+  transform: translateX(-150%);
+  animation: info_benefits 5s forwards;
+
+  &_wrapper {
+    display: flex;
+    gap: 230px;
+  }
+
+  @media (max-width: 1100px) {
+    &_wrapper {
+      gap: 45px;
+    }
+  }
+}
+
+@keyframes info_benefits {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

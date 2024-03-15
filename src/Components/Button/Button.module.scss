@@ -1,0 +1,95 @@
+.btn {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 308px 71px;
+  grid-template-rows: 71px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--primary-font-raleway);
+  transition: 0.3s;
+  border: none;
+
+  &_text {
+    display: flex;
+    padding-left: 24px;
+  }
+
+  &_text_mobile {
+    display: none;
+  }
+
+  &_square {
+    position: relative;
+    height: 100%;
+
+    svg {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+    }
+  }
+
+  &_transparent {
+    background: transparent;
+    color: var(--primary-color);
+    border: var(--primary-color) solid 1px;
+
+    .btn_square {
+      border-left: var(--primary-color) solid 1px;
+
+      svg {
+        path {
+          stroke: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  &_color {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    .btn_square {
+      border-left: var(--secondary-color) solid 2px;
+
+      svg {
+        path {
+          stroke: var(--secondary-color);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 744px) {
+    width: 100%;
+    grid-template-columns: auto 27px;
+    grid-template-rows: 40px;
+    font-size: 10px;
+
+    &_text {
+      display: none;
+    }
+
+    &_text_mobile {
+      display: block;
+    }
+
+    svg {
+      bottom: 5px;
+      right: 5px;
+      width: 8.37px;
+      height: 8.37px;
+    }
+  }
+  @media (max-width: 450px) {
+    grid-template-rows: 30px;
+  }
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn_disabled,
+.btn_disabled:hover {
+  opacity: 0.4;
+}

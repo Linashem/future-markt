@@ -1,0 +1,52 @@
+.checkbox_wrapper {
+  position: relative;
+  margin-top: 110px;
+  padding-left: 53px;
+  display: block;
+  max-width: 395px;
+  font-family: var(--secondary-font-montserrat);
+  font-size: 16px;
+  line-height: 20.61px;
+}
+
+.checkbox_element {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary-color);
+  appearance: none;
+}
+
+.checkbox_element:checked::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 612px) {
+  .checkbox_wrapper {
+    margin-top: 30px;
+    padding-left: 32px;
+    display: block;
+    max-width: 251px;
+    font-size: 12px;
+    line-height: 15.46px;
+  }
+
+  .checkbox_element {
+    top: 0;
+    width: 15px;
+    height: 15px;
+  }
+
+  .checkbox_element:checked::before {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
